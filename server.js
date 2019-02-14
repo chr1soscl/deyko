@@ -14,6 +14,6 @@ app.get('/',function(req,res){
     res.send('Welcome to Deyko.')
 })
 
-app.listen(PORT,function(){
+app.listen(process.env.PORT || PORT,function(){
     console.log('running from localhost:'+PORT)
 })
