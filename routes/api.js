@@ -2,8 +2,8 @@ const express = require("express");
 const jwt = require("jsonwebtoken");
 const router = express.Router();
 const Sequelize = require("sequelize");
-const sequelize = new Sequelize("bugs123","postgres","6A5T2MeGzK", {
-    host:"localhost",
+const sequelize = new Sequelize("xoemodkv","xoemodkv","1HA9UVoPV9sngqqfiXPycMSdpjvZMIaL", {
+    host:"baasu.db.elephantsql.com",
     dialect:"postgres",
     operatorsAliases: false,
     pool:{
