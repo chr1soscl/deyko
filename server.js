@@ -11,7 +11,7 @@ app.use(bodyParser.json())
 
 app.use('/deyko',api)
 app.get('/',function(req,res){
-    res.send('Server')
+    res.send('Welcome to Deyko.')
 })
 
 app.listen(PORT,function(){

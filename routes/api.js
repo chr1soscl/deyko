@@ -15,7 +15,7 @@ const sequelize = new Sequelize("xoemodkv","xoemodkv","1HA9UVoPV9sngqqfiXPycMSdp
 });
 
 router.get("/",(req,res)=>{
-        res.send("from API route");
+        res.send("Welcome to the Deyko routes.");
 });
 
 sequelize
