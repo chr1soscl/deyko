@@ -90,6 +90,168 @@ router.get("/projects",verifyToken,(req,res)=>{
     project.findAll().then(projects=>res.json(projects));
 });
 
+router.post("/criticalitychart",(req,res) => {
+    let chart = [
+        ['Defects', 'Number of Defects'],
+        ['Critical', 3],
+        ['High', 5],
+        ['Medium', 12],
+        ['Low',  6]     
+        ];
+    let chart1901 = [
+        ['Defects', 'Number of Defects'],
+        ['Critical', 7],
+        ['High', 2],
+        ['Medium', 12],
+        ['Low',  6]     
+        ];
+    let chart1902 = [
+        ['Defects', 'Number of Defects'],
+        ['Critical', 1],
+        ['High', 9],
+        ['Medium', 12],
+        ['Low',  6]     
+        ];
+    var chartData=req.body;
+    if(chartData.release==='1') 
+       res.json(chart1901);
+    else 
+    if (chartData.release==='2')
+       res.json(chart1902);
+    else
+       res.json(chart);
+});
+
+router.post("/phasechart",(req,res) => {
+    let chart = [
+        ['Defects', 'Number of Defects'],
+        ['Critical', 3],
+        ['High', 5],
+        ['Medium', 12],
+        ['Low',  6],
+        ['On HOld', 4]     
+        ];
+    let chart1901 = [
+        ['Defects', 'Number of Defects'],
+        ['Critical', 7],
+        ['High', 2],
+        ['Medium', 12],
+        ['Low',  6],
+        ['On HOld', 4]     
+        ];
+    let chart1902 = [
+        ['Defects', 'Number of Defects'],
+        ['Critical', 1],
+        ['High', 9],
+        ['Medium', 12],
+        ['Low',  6],
+        ['On HOld', 4]     
+        ];
+    var chartData=req.body;
+    if(chartData.release==='1') 
+       res.json(chart1901);
+    else 
+    if (chartData.release==='2')
+       res.json(chart1902);
+    else
+       res.json(chart);
+});
+
+router.post("/rcachart",(req,res) => {
+    let chart = [
+        ['Defects', 'Number of Defects'],
+        ['Critical', 3],
+        ['High', 5],
+        ['Medium', 12],
+        ['Low',  6]     
+        ];
+    let chart1901 = [
+        ['Defects', 'Number of Defects'],
+        ['Critical', 7],
+        ['High', 2],
+        ['Medium', 12],
+        ['Low',  6]     
+        ];
+    let chart1902 = [
+        ['Defects', 'Number of Defects'],
+        ['Critical', 1],
+        ['High', 9],
+        ['Medium', 12],
+        ['Low',  6]     
+        ];
+    var chartData=req.body;
+    if(chartData.release==='1') 
+       res.json(chart1901);
+    else 
+    if (chartData.release==='2')
+       res.json(chart1902);
+    else
+       res.json(chart);
+});
+
+router.post("/rcaprojectchart",(req,res) => {
+    let chart = [
+        ['Genre', 'Fantasy & Sci Fi', 'Romance', 'Mystery/Crime', 'General',
+         'Western', 'Literature', { role: 'annotation' } ],
+        ['2010', 10, 24, 20, 32, 18, 5, ''],
+        ['2020', 15, 22, 23, 30, 16, 9, ''],
+        ['2030', 36, 19, 29, 30, 12, 13, '']
+      ];
+    let chart1901 = [
+        ['Genre', 'Fantasy & Sci Fi', 'Romance', 'Mystery/Crime', 'General',
+         'Western', 'Literature', { role: 'annotation' } ],
+        ['2010', 10, 24, 20, 32, 18, 5, ''],
+        ['2020', 6, 22, 23, 30, 16, 9, ''],
+        ['2030', 38, 19, 29, 30, 12, 13, '']
+      ];
+    let chart1902 = [
+        ['Genre', 'Fantasy & Sci Fi', 'Romance', 'Mystery/Crime', 'General',
+         'Western', 'Literature', { role: 'annotation' } ],
+        ['2010', 10, 24, 20, 32, 18, 5, ''],
+        ['2020', 16, 22, 23, 30, 16, 9, ''],
+        ['2030', 98, 19, 29, 30, 12, 13, '']
+      ];
+    var chartData=req.body;
+    if(chartData.release==='1') 
+       res.json(chart1901);
+    else 
+    if (chartData.release==='2')
+       res.json(chart1902);
+    else
+       res.json(chart);
+});
+
+router.post("/projectrcachart",(req,res) => {
+    let chart = [
+        ['Genre', 'Fantasy & Sci Fi', 'Romance', 'Mystery/Crime', 'General',
+         'Western', 'Literature', { role: 'annotation' } ],
+        ['2010', 3, 24, 20, 32, 18, 5, ''],
+        ['2020', 15, 22, 23, 30, 16, 9, ''],
+        ['2030', 26, 19, 29, 30, 12, 13, '']
+      ];
+    let chart1901 = [
+        ['Genre', 'Fantasy & Sci Fi', 'Romance', 'Mystery/Crime', 'General',
+         'Western', 'Literature', { role: 'annotation' } ],
+        ['2010', 9, 24, 20, 32, 18, 5, ''],
+        ['2020', 61, 22, 23, 30, 16, 9, ''],
+        ['2030', 18, 19, 29, 30, 12, 13, '']
+      ];
+    let chart1902 = [
+        ['Genre', 'Fantasy & Sci Fi', 'Romance', 'Mystery/Crime', 'General',
+         'Western', 'Literature', { role: 'annotation' } ],
+        ['2010', 69, 24, 20, 32, 18, 5, ''],
+        ['2020', 26, 22, 23, 30, 16, 9, ''],
+        ['2030', 38, 19, 29, 30, 12, 13, '']
+      ];
+    var chartData=req.body;
+    if(chartData.release==='1') 
+       res.json(chart1901);
+    else 
+    if (chartData.release==='2')
+       res.json(chart1902);
+    else
+       res.json(chart);
+});
 
 
 router.post("/userlogin",(req,res) =>{
