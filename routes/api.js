@@ -69,10 +69,10 @@ const phase = sequelize.import("../models/phases");
 const project = sequelize.import("../models/projects");
 
 
-router.get("/months",verifyToken,(req,res)=>{
+router.get("/months",(req,res)=>{
     month.findAll().then(months=>res.json(months));
 });
-router.get("/releases",verifyToken,(req,res)=>{
+router.get("/releases",(req,res)=>{
     release.findAll().then(releases=>res.json(releases));
 });
 router.get("/releasetypes",(req,res)=>{
@@ -87,7 +87,7 @@ router.get("/bugcriticality",(req,res)=>{
 router.get("/phases",(req,res)=>{
     phase.findAll().then(phases=>res.json(phases));
 });
-router.get("/projects",verifyToken,(req,res)=>{
+router.get("/projects",(req,res)=>{
     project.findAll().then(projects=>res.json(projects));
 });
 
