@@ -33,6 +33,7 @@ function verifyToken(req,res,next){
         console.log("!req.headers.authorization");
         return res.status(401).send("Unauthorized request.");
     }
+
     let token = req.headers.authorization.split(" ")[1];
     
     if (token === "null"){
@@ -53,8 +54,6 @@ function verifyToken(req,res,next){
         return res.status(401).send("Unathorized request.");
     }
 
-    console.log("payload.subject",pay.subject);
-
     req.userId = payload.subject;
     next();
 }
@@ -72,7 +71,7 @@ const project = sequelize.import("../models/projects");
 router.get("/months",(req,res)=>{
     month.findAll().then(months=>res.json(months));
 });
-router.get("/releases",(req,res)=>{
+router.get("/releases",verifyToken,(req,res)=>{
     release.findAll().then(releases=>res.json(releases));
 });
 router.get("/releasetypes",(req,res)=>{
@@ -84,10 +83,10 @@ router.get("/bugstatus",(req,res)=>{
 router.get("/bugcriticality",(req,res)=>{
     bugCriticality.findAll().then(criticality=>res.json(criticality));
 });
-router.get("/phases",(req,res)=>{
+router.get("/phases",verifyToken,(req,res)=>{
     phase.findAll().then(phases=>res.json(phases));
 });
-router.get("/projects",(req,res)=>{
+router.get("/projects",verifyToken,(req,res)=>{
     project.findAll().then(projects=>res.json(projects));
 });
 
