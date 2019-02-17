@@ -191,22 +191,22 @@ router.post("/rcachart",(req,res) => {
 
 router.post("/rcaprojectchart",(req,res) => {
     let chart = [
-        ['Genre', 'Fantasy & Sci Fi', 'Romance', 'Mystery/Crime', 'General',
-         'Western', 'Literature', { role: 'annotation' } ],
+        ['Project', 'Angular migration', 'Legacy Rest APIs', 'Java WS', 'Node.js APIs',
+         'eCommerce regression', 'Mobile', { role: 'annotation' } ],
         ['2010', 10, 24, 20, 32, 18, 5, ''],
         ['2020', 15, 22, 23, 30, 16, 9, ''],
         ['2030', 36, 19, 29, 30, 12, 13, '']
       ];
     let chart1901 = [
-        ['Genre', 'Fantasy & Sci Fi', 'Romance', 'Mystery/Crime', 'General',
-         'Western', 'Literature', { role: 'annotation' } ],
+        ['Project', 'Angular migration', 'Legacy Rest APIs', 'Java WS', 'Node.js APIs',
+         'eCommerce regression', 'Mobile', { role: 'annotation' } ],
         ['2010', 10, 24, 20, 32, 18, 5, ''],
         ['2020', 6, 22, 23, 30, 16, 9, ''],
         ['2030', 38, 19, 29, 30, 12, 13, '']
       ];
     let chart1902 = [
-        ['Genre', 'Fantasy & Sci Fi', 'Romance', 'Mystery/Crime', 'General',
-         'Western', 'Literature', { role: 'annotation' } ],
+        ['Project', 'Angular migration', 'Legacy Rest APIs', 'Java WS', 'Node.js APIs',
+         'eCommerce regression', 'Mobile', { role: 'annotation' } ],
         ['2010', 10, 24, 20, 32, 18, 5, ''],
         ['2020', 16, 22, 23, 30, 16, 9, ''],
         ['2030', 98, 19, 29, 30, 12, 13, '']
@@ -223,22 +223,22 @@ router.post("/rcaprojectchart",(req,res) => {
 
 router.post("/projectrcachart",(req,res) => {
     let chart = [
-        ['Genre', 'Fantasy & Sci Fi', 'Romance', 'Mystery/Crime', 'General',
-         'Western', 'Literature', { role: 'annotation' } ],
+        ['Project', 'Angular migration', 'Legacy Rest APIs', 'Java WS', 'Node.js APIs',
+         'eCommerce regression', 'Mobile', { role: 'annotation' } ],
         ['2010', 3, 24, 20, 32, 18, 5, ''],
         ['2020', 15, 22, 23, 30, 16, 9, ''],
         ['2030', 26, 19, 29, 30, 12, 13, '']
       ];
     let chart1901 = [
-        ['Genre', 'Fantasy & Sci Fi', 'Romance', 'Mystery/Crime', 'General',
-         'Western', 'Literature', { role: 'annotation' } ],
+        ['Project', 'Angular migration', 'Legacy Rest APIs', 'Java WS', 'Node.js APIs',
+         'eCommerce regression', 'Mobile', { role: 'annotation' } ],
         ['2010', 9, 24, 20, 32, 18, 5, ''],
         ['2020', 61, 22, 23, 30, 16, 9, ''],
         ['2030', 18, 19, 29, 30, 12, 13, '']
       ];
     let chart1902 = [
-        ['Genre', 'Fantasy & Sci Fi', 'Romance', 'Mystery/Crime', 'General',
-         'Western', 'Literature', { role: 'annotation' } ],
+        ['Project', 'Angular migration', 'Legacy Rest APIs', 'Java WS', 'Node.js APIs',
+         'eCommerce regression', 'Mobile', { role: 'annotation' } ],
         ['2010', 69, 24, 20, 32, 18, 5, ''],
         ['2020', 26, 22, 23, 30, 16, 9, ''],
         ['2030', 38, 19, 29, 30, 12, 13, '']
