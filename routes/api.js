@@ -91,7 +91,7 @@ router.get("/projects",verifyToken,(req,res)=>{
     project.findAll().then(projects=>res.json(projects));
 });
 router.get("/bugs",(req,res)=>{
-    bug.findAll().then(bugs=>res.json(bugs));
+    bug.findAll( { limit:100 } ).then(bugs=>res.json(bugs));
 });
 
 router.post("/criticalitychart",(req,res) => {
