@@ -66,6 +66,7 @@ const bugStatus = sequelize.import("../models/bug_status");
 const user = sequelize.import("../models/app_users");
 const phase = sequelize.import("../models/phases");
 const project = sequelize.import("../models/projects");
+const bug = sequelize.import("../models/bugs");
 
 
 router.get("/months",(req,res)=>{
@@ -88,6 +89,9 @@ router.get("/phases",verifyToken,(req,res)=>{
 });
 router.get("/projects",verifyToken,(req,res)=>{
     project.findAll().then(projects=>res.json(projects));
+});
+router.get("/bugs",(req,res)=>{
+    bug.findAll().then(bugs=>res.json(bugs));
 });
 
 router.post("/criticalitychart",(req,res) => {
