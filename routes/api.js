@@ -129,27 +129,27 @@ router.post("/criticalitychart",(req,res) => {
 router.post("/phasechart",(req,res) => {
     let chart = [
         ['Defects', 'Number of Defects'],
-        ['Critical', 3],
+        ['Critical', 13],
         ['High', 5],
         ['Medium', 12],
         ['Low',  6],
-        ['On HOld', 4]     
+        ['On HOld', 14]     
         ];
     let chart1901 = [
         ['Defects', 'Number of Defects'],
         ['Critical', 7],
         ['High', 2],
-        ['Medium', 12],
+        ['Medium', 6],
         ['Low',  6],
-        ['On HOld', 4]     
+        ['On HOld', 13]     
         ];
     let chart1902 = [
         ['Defects', 'Number of Defects'],
-        ['Critical', 1],
+        ['Critical', 11],
         ['High', 9],
         ['Medium', 12],
-        ['Low',  6],
-        ['On HOld', 4]     
+        ['Low',  5],
+        ['On HOld', 24]     
         ];
     var chartData=req.body;
     if(chartData.release==='1') 
